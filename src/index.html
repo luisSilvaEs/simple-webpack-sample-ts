@@ -5,15 +5,17 @@
     <body>
         <div class="b-app">
             <div class="b-app__greetings-message">
-                <h1>Hello World Webpack</h1>
+                <h1>Sample app bundled with Webpack</h1>
             </div>
-            <div class="js-change-content b-app__user-name">
-                User
+            <div class="b-app__user-name">
+                <span>Hello: </span>
+                <span class="js-change-content">User</span>
             </div>
-            <div class="b-app-form">
+            <form class="b-app-form" id="form-hello">
                 <input type="text" placeholder="Type your name for a greeting...">
                 <button id="button-changer">Click me!</button>
-            </div>
+                <button id="button-reset"> Reset</button>
+            </form>
         </div>
     </body>
 </html>
