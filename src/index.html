@@ -3,10 +3,17 @@
         <title>Sample web app with webpack</title>
     </head>
     <body>
-        <h1>Hello World Webpack</h1>
-        <div class="js-change-content">
-            User
+        <div class="b-app">
+            <div class="b-app__greetings-message">
+                <h1>Hello World Webpack</h1>
+            </div>
+            <div class="js-change-content b-app__user-name">
+                User
+            </div>
+            <div class="b-app-form">
+                <input type="text" placeholder="Type your name for a greeting...">
+                <button id="button-changer">Click me!</button>
+            </div>
         </div>
-        <button id="button-changer">Click me!</button>
     </body>
 </html>

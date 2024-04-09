@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');//Added manually
 
+
 //Produced by ChatGPT when asked how to use TS with Webpack
 module.exports = {
   entry: './src/index.ts',
@@ -13,6 +14,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/sass'),
+        use: [
+            'style-loader',// Inject CSS into the DOM
+            'css-loader', // Translates CSS into CommonJS
+            'sass-loader' // Compiles Sass to CSS
+        ]
+      },
       {
         test: /\.ts$/,
         use: 'ts-loader',
