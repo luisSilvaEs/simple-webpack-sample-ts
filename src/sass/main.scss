@@ -1,3 +1,37 @@
+@use './_variables' as *;
+@use './_mixins' as mixins-collection;
+
 .b-app {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: $arial-family;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__user-name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .b-app-form {
+
+        input {
+            width: 220px;
+            height: 30px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 8px 10px;
+            border: none;
+
+            &:first-of-type {
+                @include mixins-collection.primary-button( $button-br );
+                cursor: pointer;
+            }
+
+            &:nth-of-type(2) {
+                @include mixins-collection.secondary-button( $button-br )
+            }
+        }
+    }
 }

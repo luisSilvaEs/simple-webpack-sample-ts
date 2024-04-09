@@ -1,0 +1,13 @@
+@use './variables' as *;
+
+@mixin primary-button ($radius) {
+    background-color: $button-primary-background;
+    color: $button-primary-color;
+    border-radius: $radius;
+}
+
+@mixin secondary-button ($radius) {
+    background-color: $button-secondary-background;
+    color: $button-secondary-color;
+    border-radius: $radius;
+}
