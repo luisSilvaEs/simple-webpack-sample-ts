@@ -25,9 +25,14 @@ module.exports = (env, argv) => {
           ]
         },
         {
+          test: /\.test.ts$/,
+          exclude: /node_modules/,
+          use: 'ts-loader'
+        },
+        {
           test: /\.ts$/,
-          use: 'ts-loader',
-          exclude: /node_modules/
+          exclude: [/\.test.ts$/, /node_modules/],
+          use: 'ts-loader'
         }
       ]
     },
