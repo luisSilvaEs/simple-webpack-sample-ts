@@ -1,0 +1,33 @@
+name: Bundle on Merge to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '21'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build for production
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Upload production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: production-artifacts
+          path: dist
