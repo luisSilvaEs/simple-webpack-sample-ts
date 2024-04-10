@@ -4,7 +4,7 @@
   "description": "Sample of use of webppack to bundle a TS app with images",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
   },
